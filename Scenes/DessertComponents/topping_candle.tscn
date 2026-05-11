@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd518130aof3s"]
+
+[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_7fbci"]
+
+[node name="Topping_Candle" instance=ExtResource("1_7fbci")]

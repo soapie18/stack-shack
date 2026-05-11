@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpopulxpm4k7x"]
+
+[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_kyvno"]
+
+[node name="Topping_Fudge" instance=ExtResource("1_kyvno")]

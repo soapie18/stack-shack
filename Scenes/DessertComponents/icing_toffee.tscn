@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b12k6souh7vme"]
+
+[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_3f1tf"]
+
+[node name="Icing_Toffee" instance=ExtResource("1_3f1tf")]

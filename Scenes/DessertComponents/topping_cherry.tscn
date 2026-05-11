@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbljogw5rxpm1"]
+
+[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_q1bn6"]
+
+[node name="Topping_Cherry" instance=ExtResource("1_q1bn6")]

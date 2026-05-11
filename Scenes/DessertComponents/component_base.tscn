@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcwbk4ij5f3ex"]
+
+[ext_resource type="Script" uid="uid://cavlc46gbbqe1" path="res://Scripts/component_base_script.gd" id="1_hhdmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdbbt"]
+
+[node name="ComponentBase" type="CharacterBody2D"]
+script = ExtResource("1_hhdmp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pdbbt")

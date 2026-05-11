@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="dessert_component" load_steps=2 format=3 uid="uid://cm5x5m03jv4sj"]
+
+[ext_resource type="Script" uid="uid://vuxjgg8s74bs" path="res://Scripts/dessert_component.gd" id="1_58sfy"]
+
+[resource]
+script = ExtResource("1_58sfy")
+name = "sponge_filling"
+metadata/_custom_type_script = "uid://vuxjgg8s74bs"
