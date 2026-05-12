@@ -5,17 +5,14 @@ class_name components_table
 	#Fillings
 	"sponge_filling" : preload("res://Scenes/DessertComponents/filling_sponge.tscn"),
 	"chocolate_filling" : preload("res://Scenes/DessertComponents/filling_chocolate.tscn"),
-	"rainbow_filling" : preload("res://Scenes/DessertComponents/filling_rainbow.tscn"),
-	"sprinkles_filling" : preload("res://Scenes/DessertComponents/filling_sprinkles.tscn"),
 	"toffee_filling" : preload("res://Scenes/DessertComponents/filling_toffee.tscn"),
+	"pink_filling" : preload("res://Scenes/DessertComponents/filling_pink.tscn"),
 	#Icing
 	"chocolate_icing" : preload("res://Scenes/DessertComponents/icing_chocolate.tscn"),
-	"cosmic_icing" : preload("res://Scenes/DessertComponents/icing_cosmic.tscn"),
 	"pink_icing" : preload("res://Scenes/DessertComponents/icing_pink.tscn"),
 	"sprinkles_icing" : preload("res://Scenes/DessertComponents/icing_sprinkles.tscn"),
 	"toffee_icing" : preload("res://Scenes/DessertComponents/icing_toffee.tscn"),
 	#Toppings
-	"biscuit_topping" : preload("res://Scenes/DessertComponents/topping_biscuit.tscn"),
 	"candle_topping" : preload("res://Scenes/DessertComponents/topping_candle.tscn"),
 	"cherry_topping" : preload("res://Scenes/DessertComponents/topping_cherry.tscn"),
 	"fudge_topping" : preload("res://Scenes/DessertComponents/topping_fudge.tscn"),

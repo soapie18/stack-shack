@@ -13,7 +13,6 @@ func _randomise_component() -> PackedScene:
 	var chosen_key = component_pool.keys().pick_random()
 	print(chosen_key)
 	var random_component = component_pool[chosen_key]
-	print(typeof(random_component))
 	return random_component
 
 func _fall_downwards(delta) -> void:

@@ -1,5 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd518130aof3s"]
+[gd_scene load_steps=4 format=3 uid="uid://bd518130aof3s"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_7fbci"]
+[ext_resource type="Texture2D" uid="uid://dt8pcygyr4hdc" path="res://Sprites/DessertPieces/Candle_Topping.png" id="2_fwbc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwbc8"]
+size = Vector2(20, 6)
 
 [node name="Topping_Candle" instance=ExtResource("1_7fbci")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -14)
+texture = ExtResource("2_fwbc8")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_fwbc8")
+
+[node name="StackPoint" parent="." index="2"]
+position = Vector2(0, 2)

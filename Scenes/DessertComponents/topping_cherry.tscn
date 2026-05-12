@@ -1,5 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbljogw5rxpm1"]
+[gd_scene load_steps=4 format=3 uid="uid://bbljogw5rxpm1"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_q1bn6"]
+[ext_resource type="Texture2D" uid="uid://sfsb1tr6a1yk" path="res://Sprites/DessertPieces/Cherry_Topping.png" id="2_mlj6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qetn7"]
+size = Vector2(32, 16)
 
 [node name="Topping_Cherry" instance=ExtResource("1_q1bn6")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -14)
+texture = ExtResource("2_mlj6u")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_qetn7")

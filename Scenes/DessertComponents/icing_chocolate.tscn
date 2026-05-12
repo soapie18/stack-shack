@@ -1,5 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://65wrad53csia"]
+[gd_scene load_steps=4 format=3 uid="uid://65wrad53csia"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_aqnoa"]
+[ext_resource type="Texture2D" uid="uid://doxrjenf0r7o4" path="res://Sprites/DessertPieces/Choc_Icing.png" id="2_auqdi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auqdi"]
+size = Vector2(60, 8.909771)
 
 [node name="Icing_Chocolate" instance=ExtResource("1_aqnoa")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -3)
+texture = ExtResource("2_auqdi")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -4.5)
+scale = Vector2(1, 1.010127)
+shape = SubResource("RectangleShape2D_auqdi")

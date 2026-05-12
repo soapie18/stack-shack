@@ -1,5 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://m6peq8p2cd01"]
+[gd_scene load_steps=4 format=3 uid="uid://conmxo2imc7bi"]
 
-[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_yvnen"]
+[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_aym5m"]
+[ext_resource type="Texture2D" uid="uid://ih5guuu33quw" path="res://Sprites/DessertPieces/Wafer_Topping.png" id="2_jlitd"]
 
-[node name="Topping_Wafer" instance=ExtResource("1_yvnen")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huuxy"]
+size = Vector2(33.09456, 9)
+
+[node name="Topping_Wafer" instance=ExtResource("1_aym5m")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -6)
+texture = ExtResource("2_jlitd")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -2.0000005)
+rotation = -0.46279612
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_huuxy")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7wmm0guok70p"]
+
+[ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_nhlgp"]
+[ext_resource type="Texture2D" uid="uid://imbypu46cny1" path="res://Sprites/DessertPieces/Pink_Filling.png" id="2_yxty0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxty0"]
+size = Vector2(53, 29)
+
+[node name="Filling_Pink" instance=ExtResource("1_nhlgp")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -32)
+texture = ExtResource("2_yxty0")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.5, -14.5)
+shape = SubResource("RectangleShape2D_yxty0")
+
+[node name="StackPoint" parent="." index="2"]
+position = Vector2(0, -29)

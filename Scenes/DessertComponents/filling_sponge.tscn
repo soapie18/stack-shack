@@ -1,5 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://yrqpvfu3pu4t"]
+[gd_scene load_steps=4 format=3 uid="uid://yrqpvfu3pu4t"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_juti4"]
+[ext_resource type="Texture2D" uid="uid://ll1845a0ypga" path="res://Sprites/DessertPieces/Sponge_Filling.png" id="2_c72g7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c72g7"]
+size = Vector2(53, 29)
 
 [node name="Filling_Sponge" instance=ExtResource("1_juti4")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -32)
+texture = ExtResource("2_c72g7")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.5, -14.5)
+shape = SubResource("RectangleShape2D_c72g7")
+
+[node name="StackPoint" parent="." index="2"]
+position = Vector2(0, -29)

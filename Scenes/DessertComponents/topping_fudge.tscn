@@ -1,5 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpopulxpm4k7x"]
+[gd_scene load_steps=4 format=3 uid="uid://dpopulxpm4k7x"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_kyvno"]
+[ext_resource type="Texture2D" uid="uid://b2i2llt40su3y" path="res://Sprites/DessertPieces/Fudge_Topping.png" id="2_a2nes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb46a"]
+size = Vector2(22, 10)
 
 [node name="Topping_Fudge" instance=ExtResource("1_kyvno")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-1, -9)
+texture = ExtResource("2_a2nes")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_jb46a")

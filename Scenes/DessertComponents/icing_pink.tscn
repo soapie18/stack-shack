@@ -1,5 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsalgrnkisgg0"]
+[gd_scene load_steps=4 format=3 uid="uid://bsalgrnkisgg0"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_eyidp"]
+[ext_resource type="Texture2D" uid="uid://dj2hfyimre1nv" path="res://Sprites/DessertPieces/Pink_Icing.png" id="2_wdaqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdaqe"]
+size = Vector2(60, 9)
 
 [node name="Icing_Pink" instance=ExtResource("1_eyidp")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -3)
+texture = ExtResource("2_wdaqe")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_wdaqe")
+
+[node name="StackPoint" parent="." index="2"]
+position = Vector2(0, -9)

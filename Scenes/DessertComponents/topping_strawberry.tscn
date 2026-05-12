@@ -1,5 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo55736tht3m4"]
+[gd_scene load_steps=4 format=3 uid="uid://bo55736tht3m4"]
 
 [ext_resource type="PackedScene" uid="uid://dcwbk4ij5f3ex" path="res://Scenes/DessertComponents/component_base.tscn" id="1_y4h3n"]
+[ext_resource type="Texture2D" uid="uid://fq0qak6qieu2" path="res://Sprites/DessertPieces/Strawberry_Topping.png" id="2_27nks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27nks"]
+size = Vector2(27, 10)
 
 [node name="Topping_Strawberry" instance=ExtResource("1_y4h3n")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -11)
+texture = ExtResource("2_27nks")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_27nks")

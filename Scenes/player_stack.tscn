@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://cq0sji2k5blic"]
+[gd_scene load_steps=3 format=3 uid="uid://cq0sji2k5blic"]
 
-[node name="PlayerStack" type="Node2D"]
+[ext_resource type="Script" uid="uid://bh8kpl2os42xv" path="res://Scripts/player_stack.gd" id="1_sb68n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74jyd"]
+size = Vector2(42, 4)
+
+[node name="PlayerStack" type="CharacterBody2D"]
+script = ExtResource("1_sb68n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="StackPoint" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_74jyd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -21.0
+offset_top = -1.0
+offset_right = 19.0
+offset_bottom = 39.0
+scale = Vector2(1.0399994, 0.04000002)

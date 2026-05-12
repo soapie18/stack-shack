@@ -2,8 +2,24 @@ extends Node2D
 
 @onready var falling_component = preload("res://Scenes/falling_component.tscn")
 
-func _process(_delta) -> void:
-	#ASAP - move this to happen in a coroutine!
+func _ready() -> void:
+	_spawn_trigger()
+
+func _spawn_trigger():
+	await _spawning()
+
+func _spawning():
+	print("spawning")
 	var falling_instance = falling_component.instantiate()
 	falling_instance.global_position = self.global_position
 	get_tree().root.add_child(falling_instance)
+	
+	await get_tree().create_timer(4).timeout
+	
+	print("coroutine finished")
+	
+	_spawn_trigger()
+
+
+func _process(_delta) -> void:
+	pass
