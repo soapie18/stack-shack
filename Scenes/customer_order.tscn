@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://qg0yaccpw5c7"]
+[gd_scene load_steps=2 format=3 uid="uid://qg0yaccpw5c7"]
+
+[ext_resource type="Script" uid="uid://raqoufy8fw3a" path="res://Scripts/customer_order.gd" id="1_brwlj"]
 
 [node name="CustomerStack" type="Node2D"]
+script = ExtResource("1_brwlj")

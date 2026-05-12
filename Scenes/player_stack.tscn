@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bh8kpl2os42xv" path="res://Scripts/player_stack.gd" id="1_sb68n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74jyd"]
-size = Vector2(42, 4)
+size = Vector2(42, 10)
 
 [node name="PlayerStack" type="CharacterBody2D"]
 script = ExtResource("1_sb68n")
@@ -11,9 +11,10 @@ script = ExtResource("1_sb68n")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="StackPoint" type="Node2D" parent="."]
+position = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_74jyd")
 
 [node name="ColorRect" type="ColorRect" parent="."]

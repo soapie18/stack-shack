@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://8bwjfxkhi5is"]
+[gd_scene load_steps=4 format=4 uid="uid://8bwjfxkhi5is"]
 
 [ext_resource type="TileSet" uid="uid://c1xhielu13go7" path="res://Sprites/sky_tiles.tres" id="1_gr6mg"]
 [ext_resource type="PackedScene" uid="uid://ca4fljjlfb3tc" path="res://Scenes/component_spawner.tscn" id="1_u2cny"]
+[ext_resource type="PackedScene" uid="uid://cq0sji2k5blic" path="res://Scenes/player_stack.tscn" id="3_cvm4u"]
 
 [node name="SkyScene" type="Node2D"]
 
@@ -10,4 +11,13 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAEAAUAAQAAAAAAAAAFAAQAAQABAAE
 tile_set = ExtResource("1_gr6mg")
 
 [node name="ComponentSpawner" parent="." instance=ExtResource("1_u2cny")]
-position = Vector2(82, -26)
+position = Vector2(814, 46)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+
+[node name="PlayerStack" parent="." instance=ExtResource("3_cvm4u")]
+position = Vector2(606, 562)
+
+[node name="ComponentSpawner2" parent="." instance=ExtResource("1_u2cny")]
+position = Vector2(391, 40)
