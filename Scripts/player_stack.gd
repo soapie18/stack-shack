@@ -16,17 +16,24 @@ func _process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, movement_lerp_weight)
 	
-	var collision = move_and_collide(velocity * delta)
+	move_and_slide()
 	
-	if collision:
-		var other = collision.get_collider()
-		print(other)
+	#var collision = move_and_collide(velocity * delta)
+	
+	#if collision:
+		#var other = collision.get_collider()
+		#print(other)
+		#typeof(other)
 		#var instance = other.instantiate()
 		#instance.global_position = current_stack.back().stack_point.global_position
-		#other.is_falling = false
+		#instance.is_falling = false
 		#add_child(instance)
-		#add_child(other)
-		
-		current_stack.append(other)
-		
-		
+		#
+		#current_stack.append(other)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
+	print(typeof(body))
+	
+	

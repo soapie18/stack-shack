@@ -1,7 +1,7 @@
 extends Node2D
 class_name components_table
 
-@export var components_dictionary: Dictionary = {
+@export var components_dictionary: Dictionary[String, PackedScene] = {
 	#Fillings
 	"sponge_filling" : preload("res://Scenes/DessertComponents/filling_sponge.tscn"),
 	"chocolate_filling" : preload("res://Scenes/DessertComponents/filling_chocolate.tscn"),

@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq0sji2k5blic"]
+[gd_scene load_steps=4 format=3 uid="uid://cq0sji2k5blic"]
 
 [ext_resource type="Script" uid="uid://bh8kpl2os42xv" path="res://Scripts/player_stack.gd" id="1_sb68n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74jyd"]
-size = Vector2(42, 10)
+size = Vector2(42, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb68n"]
+size = Vector2(42, 11)
 
 [node name="PlayerStack" type="CharacterBody2D"]
 script = ExtResource("1_sb68n")
@@ -14,7 +17,7 @@ script = ExtResource("1_sb68n")
 position = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_74jyd")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -23,3 +26,11 @@ offset_top = -1.0
 offset_right = 19.0
 offset_bottom = 39.0
 scale = Vector2(1.0399994, 0.04000002)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_sb68n")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
