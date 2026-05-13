@@ -17,3 +17,6 @@ position = Vector2(0, -2.0000005)
 rotation = -0.46279612
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_huuxy")
+
+[node name="StackPoint" parent="." index="2"]
+position = Vector2(-1, -18)

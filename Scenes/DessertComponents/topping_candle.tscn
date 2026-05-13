@@ -17,4 +17,4 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_fwbc8")
 
 [node name="StackPoint" parent="." index="2"]
-position = Vector2(0, 2)
+position = Vector2(0, -30)

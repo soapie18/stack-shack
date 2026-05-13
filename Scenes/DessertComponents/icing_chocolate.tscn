@@ -16,3 +16,6 @@ texture = ExtResource("2_auqdi")
 position = Vector2(0, -4.5)
 scale = Vector2(1, 1.010127)
 shape = SubResource("RectangleShape2D_auqdi")
+
+[node name="StackPoint" parent="." index="2"]
+position = Vector2(0, -9)

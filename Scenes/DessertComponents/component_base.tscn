@@ -6,6 +6,7 @@
 size = Vector2(53, 29)
 
 [node name="ComponentBase" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_hhdmp")
 is_falling = false
 
@@ -15,3 +16,4 @@ is_falling = false
 shape = SubResource("RectangleShape2D_pdbbt")
 
 [node name="StackPoint" type="Node2D" parent="."]
+position = Vector2(-1, 0)

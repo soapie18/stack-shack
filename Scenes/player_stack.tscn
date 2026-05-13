@@ -9,6 +9,7 @@ size = Vector2(42, 3)
 size = Vector2(42, 11)
 
 [node name="PlayerStack" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_sb68n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -28,6 +29,7 @@ offset_bottom = 39.0
 scale = Vector2(1.0399994, 0.04000002)
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -4.5)
