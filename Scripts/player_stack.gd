@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var movement_lerp_weight: float = 0.8
 
 var current_stack: Array
+@onready var current_stack_point = $StackPoint
 
 func _process(delta: float) -> void:
 	
@@ -15,6 +16,8 @@ func _process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, direction * movement_speed, movement_lerp_weight)
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, movement_lerp_weight)
+	
+	velocity.y = 0
 	
 	move_and_slide()
 	
@@ -33,7 +36,10 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
-	print(typeof(body))
-	
-	
+	if body is ComponentBase:
+		#body.get_parent().remove_child(body)
+		call_deferred("add_child", body)
+		body.global_position = current_stack_point.global_position
+		current_stack_point = body.get_node("StackPoint")
+		current_stack.append(body)
+		body.is_falling = false

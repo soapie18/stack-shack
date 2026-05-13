@@ -1,8 +1,8 @@
-extends Node2D
+class_name FallingComponent extends Node2D
 
 @onready var component_pool = ComponentsTable.components_dictionary
 
-@export var component: Node2D
+var component: ComponentBase
 
 func _ready() -> void:
 	var random_component = _randomise_component()
